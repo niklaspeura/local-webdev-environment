@@ -1,6 +1,6 @@
-# webserver# webserver
+# local-webdev-environment
 
-This is project is a preconfigured local dev environment for **wordpress**, which only **requires docker**.
+This is project is a preconfigured local dev environment for **wordpress**, which only **requires docker**.  
 I created this repo for my own needs; to have a private git repo from which I can pull from any machine, start working on in seconds, commit & push to git, and pick up the work from anywhere else.
 ### Features
 
@@ -19,11 +19,11 @@ I created this repo for my own needs; to have a private git repo from which I ca
     $ docker-compose up -d
     ```
 4) Open localhost on your browser
-5) Configure wordpress (**defaults**):
-db hostname: ```db```
-database: ```wordpress```
-db user: ```root```
-db password: ```password```
+5) Configure wordpress (**defaults**):  
+db hostname: ```db```  
+database: ```wordpress```  
+db user: ```root```  
+db password: ```password```  
 
 This concludes the basic setup.
 ### Tips and tricks
