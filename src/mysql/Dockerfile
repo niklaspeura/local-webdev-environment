@@ -1,4 +1,5 @@
 FROM mysql:8.0
+RUN rm -f db/.keep
 RUN mkdir -p /opt/mysql_backups
 COPY db/ /opt/mysql_backups/
 COPY run_mysql.sh /usr/local/bin/
