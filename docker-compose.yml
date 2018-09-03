@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+    apache:
+        build: './src/www'
+        environment:
+            - INIT_TIMEOUT=120
+        volumes:
+            - './src/www/html:/var/www/html'
+        ports:
+            - '80:80'
+        networks:
+            - mynetwork
+        depends_on:
+            - db
+    db:
+        build: './src/mysql'
+        environment:
+            - MYSQL_ROOT_PASSWORD=password
+            - MYSQL_DATABASE=wordpress
+        volumes:
+            - './src/mysql/db:/opt/mysql_backups'
+        ports:
+            - '6603:3306'
+        networks:
+            - mynetwork
+networks:
+    mynetwork:
+        name: backend
